@@ -1,0 +1,16 @@
+
+body {
+    background: linear-gradient(135deg, #D1D1D1, #A2C2FF, #9A7FF3); 
+    font-family: 'Sour Gummy', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+main {
+    background: inherit; 
+    padding: 50px;
+    text-align: center;
+}
+  

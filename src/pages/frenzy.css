@@ -1,0 +1,61 @@
+.show-container {
+  width: 80%;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 40px; 
+  background-color: rgba(31, 41, 55, 0.7); 
+  border-radius: 15px; 
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease-in-out;
+}
+
+.character-card {
+  width: 280px;
+  transition: all 0.3s ease-in-out;
+}
+
+.character-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px 10px rgba(128, 0, 255, 0.5);
+}
+
+img {
+  border-radius: 10px;
+}
+
+.show-container:hover {
+  box-shadow: 0 0 15px 5px rgba(128, 128, 128, 0.3);
+}
+
+.character-card img {
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.character-card img:hover {
+  transform: scale(1.05);
+}
+
+.character-card {
+  max-width: 16rem;
+}
+
+.character-card img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.character-card:hover img {
+  transform: scale(1.1);
+}
+
+.character-image {
+  width: 12rem;
+  height: 12rem; 
+  object-fit: scale-down;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.character-image:hover {
+  transform: scale(1.05);
+}

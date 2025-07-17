@@ -1,0 +1,95 @@
+.phobia-body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: url('https://images.hdqwalls.com/download/skull-5k-nw-1366x768.jpg') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    padding-top: 100px;
+    position: relative;
+  }
+  
+  .phobia-body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0.3;
+    z-index: -1;
+  }
+  
+  .freaky-text {
+    color: #ffcc00;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 10px #000;
+  }
+  
+  .brainrot-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    padding: 20px;
+  }
+  
+  .brainrot-box {
+    border: 2px solid #ffcc00;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 200px; 
+    flex: 1 1 calc(25% - 40px);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .brainrot-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .brainrot-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .brainrot-button {
+    color: #00ffea;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .brainrot-button:hover {
+    color: #ff0066;
+  }
+  
+
+  @media (max-width: 1024px) {
+    .brainrot-box {
+      flex: 1 1 calc(33.33% - 30px); 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .brainrot-box {
+      flex: 1 1 calc(50% - 20px); 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .brainrot-box {
+      flex: 1 1 100%; 
+    }
+  }
+  

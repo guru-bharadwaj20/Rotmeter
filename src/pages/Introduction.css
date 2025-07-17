@@ -1,0 +1,110 @@
+
+.introduction-body {
+    
+    font-family: 'Arial', sans-serif; 
+    color: white; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.introduction-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+.introduction-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.introduction-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    animation: rainbowText 5s infinite linear; 
+}
+
+@keyframes rainbowText {
+    0% { color: #ff007f; }
+    14% { color: #ff6600; }
+    28% { color: #ffcc00; }
+    42% { color: #33cc33; }
+    57% { color: #0099ff; }
+    71% { color: #9900cc; }
+    85% { color: #ff00ff; }
+    100% { color: #ff007f; }
+}
+
+.intro-text {
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.intro-text h2 {
+    font-size: 2rem;
+    color: #f3f3f3;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    animation: rainbowText 6s infinite linear; 
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.intro-text p + p {
+    margin-top: 10px;
+}
+
+.intro-text h1, .intro-text h2, .intro-text p {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.intro-text:hover {
+    background-color: rgba(255, 255, 255, 0.3); 
+    transform: scale(1.02); 
+    transition: all 0.3s ease-in-out;
+}
+
+.intro-text h2:hover {
+    color: #ff0066; 
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .introduction-header h1 {
+        font-size: 2.5rem; 
+    }
+
+    .intro-text h2 {
+        font-size: 1.8rem; 
+    }
+
+    .intro-text p {
+        font-size: 1rem;
+    }
+}
