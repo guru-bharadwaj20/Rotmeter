@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Brainrot Meter — Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Brainrot Meter</h1>
+      <p class="lede">
+        Nothing here leaves your machine. There is no account, no server, and no network code in this extension —
+        the data lives in your browser's local storage and dies with it.
+      </p>
+
+      <label class="toggle">
+        <input type="checkbox" id="enabled" />
+        <span>Tracking on</span>
+      </label>
+
+      <section>
+        <h2>Your goal</h2>
+        <p class="hint">
+          The thing the scrolling is taking from. Named, this shows up on the pause screen — and it does far more
+          work than any number ever will.
+        </p>
+        <input type="text" id="goal" placeholder="learn guitar" maxlength="60" />
+      </section>
+
+      <section>
+        <h2>The pause</h2>
+        <p class="hint">
+          Seconds of enforced wait before a feed opens. This is the part that actually changes behaviour. 0 turns it
+          off. Once you continue, that site gets a 15-minute grace period — no nagging mid-scroll.
+        </p>
+        <input type="number" id="frictionSeconds" min="0" max="30" />
+      </section>
+
+      <section>
+        <h2>Check-in</h2>
+        <p class="hint">Show a small reminder every N minutes of feed time in a day. 0 turns it off.</p>
+        <input type="number" id="nudgeAfterMinutes" min="0" max="600" />
+      </section>
+
+      <section>
+        <h2>Never count these</h2>
+        <p class="hint">
+          One fragment per line. Any URL containing one is ignored completely — not tracked, never interrupted.
+        </p>
+        <textarea id="whitelist" rows="4" placeholder="/r/cscareerquestions&#10;youtube.com/playlist"></textarea>
+      </section>
+
+      <section>
+        <h2>What gets counted</h2>
+        <p class="hint">
+          Only the infinite surfaces. YouTube Shorts counts; a YouTube lecture does not. Reddit's front page,
+          r/popular and r/all count; a subreddit you chose to open does not. If the tool ever calls your real work
+          brainrot, it has failed and you should tell it to stop.
+        </p>
+      </section>
+
+      <section class="danger">
+        <h2>Your data</h2>
+        <div class="row">
+          <button id="export">Export JSON</button>
+          <button id="clear" class="warn">Erase everything</button>
+        </div>
+      </section>
+
+      <p class="saved" id="saved"></p>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

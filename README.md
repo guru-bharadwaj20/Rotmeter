@@ -1,6 +1,13 @@
 # Brainrot: A Deep Dive into Internet Quirks and Curiosities 🧠
 
-**Brainrot** is a browser-based creative experience that captures the bizarre, brilliant, and funny edges of internet culture. Built using pure **HTML**, **CSS**, and **JavaScript**, it offers users a journey through themed digital pages—ranging from profound shower thoughts and fandom tributes to meme generators and strange fears. It’s a visual storytelling project that merges entertainment with frontend design skills.
+**Brainrot** is a browser-based creative experience that captures the bizarre, brilliant, and funny edges of internet culture. Built with **React**, **Vite**, and **Tailwind**, it offers users a journey through themed digital pages—ranging from profound shower thoughts and fandom tributes to meme generators and strange fears. It’s a visual storytelling project that merges entertainment with frontend design skills.
+
+This repo now has two halves:
+
+- **`/src`** — the site. An essay about internet culture, algorithmic capture, and attention.
+- **`/extension`** — [**Brainrot Meter**](extension/README.md), a Chrome extension that does something about it. It measures the time you actually lose to infinite feeds and puts a few seconds of friction between you and the scroll. All data stays on your machine.
+
+The site makes the argument. The extension shows up at 11:40pm when the argument matters.
 
 ---
 
@@ -30,17 +37,21 @@ Each page is visually consistent with a futuristic color palette, responsive lay
 
 ## 🛠️ Setup Instructions
 
+### The site
+
 ```bash
 # 1. Clone the repository
 git clone https://github.com/guru-bharadwaj20/PESU_IO_Final_Project.git
-
-# 2. Navigate into the project folder
 cd PESU_IO_Final_Project
 
-# 3. Open the project using Live Server in VS Code or open 'index.html' in your browser
+# 2. Install dependencies and start the dev server
+npm install
+npm run dev
 ```
 
-> 💡 No installations or dependencies required.
+### The extension
+
+Open `chrome://extensions`, enable **Developer mode**, then **Load unpacked** → select the `extension/` folder. No build step. See [extension/README.md](extension/README.md).
 
 ---
 

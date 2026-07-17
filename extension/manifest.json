@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Brainrot Meter",
+  "version": "0.1.0",
+  "description": "Measures the time you actually lose to infinite feeds, and puts a few seconds of friction between you and the scroll. All data stays on your machine.",
+  "permissions": ["storage", "tabs", "alarms", "idle"],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Brainrot Meter"
+  },
+  "options_page": "src/options/options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.instagram.com/*",
+        "*://*.tiktok.com/*",
+        "*://x.com/*",
+        "*://*.x.com/*",
+        "*://*.twitter.com/*",
+        "*://*.reddit.com/*",
+        "*://*.facebook.com/*"
+      ],
+      "js": ["src/content/overlay.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
+}

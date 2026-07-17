@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <span class="mark"></span>
+      <span>Brainrot Meter</span>
+      <button id="settings" title="Settings">Settings</button>
+    </header>
+
+    <section class="hero">
+      <div class="total" id="total">0m</div>
+      <div class="goal" id="goal"></div>
+    </section>
+
+    <section>
+      <h2>Today</h2>
+      <div id="breakdown" class="bars"></div>
+    </section>
+
+    <section>
+      <h2>Last 7 days</h2>
+      <div id="week" class="week"></div>
+      <div class="week-foot"><span id="weekTotal"></span></div>
+    </section>
+
+    <footer>
+      <span class="privacy">Stored on this device only</span>
+      <button id="export">Export</button>
+    </footer>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
