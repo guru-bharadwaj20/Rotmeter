@@ -2,7 +2,7 @@ import { classify } from './lib/classify.js';
 import * as store from './lib/storage.js';
 
 const IDLE_SECONDS = 60;
-const GRACE_MINUTES = 15;
+const GRACE_MINUTES = 5;
 
 // ---------------------------------------------------------------------------
 // Session bookkeeping
