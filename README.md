@@ -16,6 +16,14 @@ Rotmeter is two things that argue with each other: a site that dives head-first 
 &nbsp;&nbsp;
 <img src="images/Page.png" alt="The popup dashboard — today's total, breakdown and 7-day trend" width="29%"/>
 
+<br/><br/>
+
+### [⬇️ Download the extension (.zip)](https://github.com/guru-bharadwaj20/Rotmeter/raw/main/brainrot-meter.zip)
+
+**Unzip it**, then open `chrome://extensions`, turn on **Developer mode** (top right), and drag the unzipped **`brainrot-meter` folder** onto the page.
+
+*Chrome loads unpacked extensions from a folder, not from a `.zip` — dropping the zip itself will fail. Works in Chrome, Edge, Brave and any other Chromium browser.*
+
 </div>
 
 ---
@@ -76,7 +84,10 @@ npm run dev
 
 **The extension**
 
-Open `chrome://extensions` → enable **Developer mode** → **Load unpacked** → select the [`extension/`](extension/) folder. No installation or build required.
+No installation or build required. Either:
+
+- **[Download the zip](https://github.com/guru-bharadwaj20/Rotmeter/raw/main/brainrot-meter.zip)**, unzip it, and drag the `brainrot-meter` folder onto `chrome://extensions` with **Developer mode** enabled — or
+- Clone the repo and use **Load unpacked** → select the [`extension/`](extension/) folder.
 
 ---
 
@@ -84,9 +95,10 @@ Open `chrome://extensions` → enable **Developer mode** → **Load unpacked** �
 
 ```
 Rotmeter/
-├── website/      React + Vite site (the essay)
-├── extension/    Chrome extension, MV3 (the intervention)
-├── images/       Screenshots used in this README
+├── website/              React + Vite site (the essay)
+├── extension/            Chrome extension, MV3 (the intervention)
+├── images/               Screenshots used in this README
+├── brainrot-meter.zip    Packaged extension, for the download link above
 └── README.md
 ```
 
