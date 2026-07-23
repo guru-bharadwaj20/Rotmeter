@@ -8,13 +8,9 @@ Rotmeter is two things that argue with each other: a site that dives head-first 
 
 <br/>
 
-<img src="images/Timer.png" alt="The pause screen — a breathing countdown before a feed opens" width="90%"/>
-
-<br/><br/>
-
-<img src="images/Platforms.png" alt="Per-site tracking across the major feeds" width="47%"/>
+<img src="images/Timer.png" alt="The pause screen — a breathing countdown before a feed opens" width="61%"/>
 &nbsp;&nbsp;
-<img src="images/Page.png" alt="The popup dashboard — today's total, breakdown and 7-day trend" width="29%"/>
+<img src="images/Page.png" alt="The popup dashboard — today's total, breakdown and 7-day trend" width="27%"/>
 
 <br/><br/>
 
@@ -56,9 +52,9 @@ A **React + Vite + Tailwind** experience that wanders the strange edges of inter
 ### 🧩 The extension — [`extension/`](extension/)
 A **Manifest V3** Chrome extension that measures the time you actually lose to infinite feeds and interrupts the scroll with a short, chosen pause. No build step — load it unpacked and go.
 
-- **The pause** *(image above)* — before a feed opens, a countdown and one deliberate click. Enough friction to break the automatic reach, not enough to feel like a wall.
+- **The pause** *(left)* — before a feed opens, a countdown and one deliberate click. Enough friction to break the automatic reach, not enough to feel like a wall.
 - **The dashboard** *(right)* — today's total, a per-platform breakdown, a 7-day trend, and one-tap JSON export.
-- **The platforms** *(left)* — YouTube Shorts, Instagram Reels, X / Twitter, Reddit's front page, Facebook, Snapchat Spotlight, Threads, Bluesky, Tumblr, Pinterest, Quora, 9GAG, ShareChat and Likee. Classification is **per-URL, not per-domain**: a lecture isn't brainrot, a Short is; r/cscareerquestions isn't, r/all is.
+- **The platforms** — YouTube Shorts, Instagram Reels, X / Twitter, Reddit's front page, Facebook, Snapchat Spotlight, Threads, Bluesky, Tumblr, Pinterest, Quora, 9GAG, ShareChat and Likee. Classification is **per-URL, not per-domain**: a lecture isn't brainrot, a Short is; r/cscareerquestions isn't, r/all is.
 - **Local only** — no account, no server, and no network code anywhere in the extension. Your data never leaves the machine.
 
 Full architecture and design notes live in [`extension/README.md`](extension/README.md).
