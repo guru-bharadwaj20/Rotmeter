@@ -20,6 +20,8 @@ No build step. No bundler, no npm install, nothing to compile — it's plain ES 
 
 **Classification is per-URL, not per-domain.** This is the whole credibility of the tool. YouTube is lectures *and* Shorts. Reddit is r/cscareerquestions *and* r/all. If it tells you your thesis research was brainrot, you uninstall, and you're right to. So it counts YouTube Shorts but not `/watch`; Reddit's front page, r/popular and r/all but never a subreddit you deliberately opened. Anything ambiguous defaults to *not counted*.
 
+The one exception is a single-purpose short-video app like Likee, where the entire product *is* one vertical feed and there is no lecture to protect. Those get a `wholeSite()` rule: count everything, carve out sign-in, settings and legal pages. Same treatment the classifier gave TikTok before it was dropped.
+
 **Local-only, and structurally so.** There is no network code in this extension. No account, no server, no analytics. The privacy story isn't a policy you have to trust — it's the absence of any code that could send anything anywhere.
 
 ## Architecture
