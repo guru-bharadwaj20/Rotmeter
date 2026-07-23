@@ -50,7 +50,7 @@ A **Manifest V3** Chrome extension that measures the time you actually lose to i
 
 - **The pause** *(image above)* — before a feed opens, a countdown and one deliberate click. Enough friction to break the automatic reach, not enough to feel like a wall.
 - **The dashboard** *(right)* — today's total, a per-platform breakdown, a 7-day trend, and one-tap JSON export.
-- **The platforms** *(left)* — YouTube Shorts, Instagram Reels, TikTok, X / Twitter, Reddit's front page, Facebook. Classification is **per-URL, not per-domain**: a lecture isn't brainrot, a Short is; r/cscareerquestions isn't, r/all is.
+- **The platforms** *(left)* — YouTube Shorts, Instagram Reels, X / Twitter, Reddit's front page, Facebook. Classification is **per-URL, not per-domain**: a lecture isn't brainrot, a Short is; r/cscareerquestions isn't, r/all is.
 - **Local only** — no account, no server, and no network code anywhere in the extension. Your data never leaves the machine.
 
 Full architecture and design notes live in [`extension/README.md`](extension/README.md).

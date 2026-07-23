@@ -1,6 +1,6 @@
 // Storage schema.
 //
-// Shape is deliberately aggregation-ready: { "2026-07-17": { tiktok: 1840 } }.
+// Shape is deliberately aggregation-ready: { "2026-07-17": { youtube_shorts: 1840 } }.
 // Bucketed daily totals by category. No URLs, no timestamps, no per-event rows.
 // That means a future opt-in "contribute anonymised totals" feature can send a
 // day record as-is without a scrubbing step — and it means a leak of this data

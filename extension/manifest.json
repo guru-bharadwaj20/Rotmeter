@@ -18,7 +18,6 @@
       "matches": [
         "*://*.youtube.com/*",
         "*://*.instagram.com/*",
-        "*://*.tiktok.com/*",
         "*://x.com/*",
         "*://*.x.com/*",
         "*://*.twitter.com/*",

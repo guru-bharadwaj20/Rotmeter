@@ -8,7 +8,6 @@ export const CATEGORIES = {
   youtube_shorts: 'YouTube Shorts',
   instagram_reels: 'Instagram Reels',
   instagram_feed: 'Instagram',
-  tiktok: 'TikTok',
   twitter_feed: 'X / Twitter',
   reddit_feed: 'Reddit front page',
   facebook_feed: 'Facebook',
@@ -32,11 +31,6 @@ const RULES = [
   {
     id: 'instagram_feed',
     test: (h, p) => is(h, 'instagram.com') && (p === '/' || p.startsWith('/explore')),
-  },
-  // TikTok is the feed, top to bottom. DMs are not.
-  {
-    id: 'tiktok',
-    test: (h, p) => is(h, 'tiktok.com') && !p.startsWith('/messages'),
   },
   {
     id: 'twitter_feed',

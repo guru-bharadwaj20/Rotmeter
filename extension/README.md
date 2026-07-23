@@ -44,7 +44,7 @@ Three things in the tracking core are less obvious than they look:
 ## Data
 
 ```jsonc
-{ "2026-07-17": { "youtube_shorts": 1840, "tiktok": 620 } }  // seconds, per local day
+{ "2026-07-17": { "youtube_shorts": 1840, "instagram_reels": 620 } }  // seconds, per local day
 ```
 
 Bucketed daily totals by category. No URLs, no event timestamps, no per-visit rows. 90-day retention, then oldest days are dropped.
