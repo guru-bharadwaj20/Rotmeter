@@ -14,7 +14,9 @@ Rotmeter is two things that argue with each other: a site that dives head-first 
 
 <br/><br/>
 
-### [⬇️ Download the extension (.zip)](https://github.com/guru-bharadwaj20/Rotmeter/raw/main/brainrot-meter.zip)
+### [⬇️ Download the extension (.zip)](https://github.com/guru-bharadwaj20/Rotmeter/releases/latest/download/brainrot-meter.zip)
+
+![Downloads](https://img.shields.io/github/downloads/guru-bharadwaj20/Rotmeter/total?label=downloads&color=blue)
 
 **Unzip it**, then open `chrome://extensions`, turn on **Developer mode** (top right), and drag the unzipped **`brainrot-meter` folder** onto the page.
 
@@ -82,7 +84,7 @@ npm run dev
 
 No installation or build required. Either:
 
-- **[Download the zip](https://github.com/guru-bharadwaj20/Rotmeter/raw/main/brainrot-meter.zip)**, unzip it, and drag the `brainrot-meter` folder onto `chrome://extensions` with **Developer mode** enabled — or
+- **[Download the zip](https://github.com/guru-bharadwaj20/Rotmeter/releases/latest/download/brainrot-meter.zip)**, unzip it, and drag the `brainrot-meter` folder onto `chrome://extensions` with **Developer mode** enabled — or
 - Clone the repo and use **Load unpacked** → select the [`extension/`](extension/) folder.
 
 ---
