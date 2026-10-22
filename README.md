@@ -1,113 +1,210 @@
-<div align="center">
-
 # Rotmeter
 
-**The internet, examined — and interrupted.**
+**The internet, examined — and interrupted. A site about internet-culture brainrot, and a Chrome extension that puts a few deliberate seconds between you and the infinite feed.**
 
-Rotmeter is two things that argue with each other: a site that dives head-first into internet-culture *brainrot*, and a Chrome extension that puts a few deliberate seconds between you and the infinite feed. One makes the case. The other shows up at 11:40pm, when the case actually matters.
+[![Download](https://img.shields.io/badge/download-brainrot--meter.zip-2ea44f?logo=googlechrome&logoColor=white)](https://github.com/guru-bharadwaj20/Rotmeter/releases/latest/download/brainrot-meter.zip)
+[![Downloads](https://img.shields.io/github/downloads/guru-bharadwaj20/Rotmeter/total?label=downloads&color=blue)](https://github.com/guru-bharadwaj20/Rotmeter/releases)
+[![Manifest](https://img.shields.io/badge/Chrome-Manifest_V3-4285F4?logo=googlechrome&logoColor=white)](extension/)
+[![React](https://img.shields.io/badge/site-React_·_Vite_·_Tailwind-61DAFB?logo=react&logoColor=black)](website/)
+[![Privacy](https://img.shields.io/badge/data-local_only-informational)](extension/README.md)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-<br/>
+Two halves that argue with each other. One makes the case about attention and
+algorithmic capture; the other shows up at 11:40 pm, when the case actually
+matters.
 
-<img src="images/Timer.png" alt="The pause screen — a breathing countdown before a feed opens" width="61%"/>
-&nbsp;&nbsp;
-<img src="images/Page.png" alt="The popup dashboard — today's total, breakdown and 7-day trend" width="27%"/>
-
-<br/><br/>
-
-### [⬇️ Download the extension (.zip)](https://github.com/guru-bharadwaj20/Rotmeter/releases/latest/download/brainrot-meter.zip)
-
-![Downloads](https://img.shields.io/github/downloads/guru-bharadwaj20/Rotmeter/total?label=downloads&color=blue)
-
-**Unzip it**, then open `chrome://extensions`, turn on **Developer mode** (top right), and drag the unzipped **`brainrot-meter` folder** onto the page.
-
-*Chrome loads unpacked extensions from a folder, not from a `.zip` — dropping the zip itself will fail. Works in Chrome, Edge, Brave and any other Chromium browser.*
-
-</div>
+<p align="center">
+  <img src="images/Timer.png" alt="The pause screen — a breathing countdown before a feed opens" width="61%"/>
+  &nbsp;&nbsp;
+  <img src="images/Page.png" alt="The popup dashboard — today's total, breakdown and 7-day trend" width="27%"/>
+</p>
 
 ---
 
-## Background
+## Contents
 
-Rotmeter began as **BrainROT**, a browser-based website I built together with my teammates as our **final deliverable for the PESU I/O course** — a multi-page React site exploring the quirks and curiosities of internet culture.
-
-After the course wrapped, I carried the project further on my own. I took its own subject — attention, and the way infinite feeds quietly take it — and turned the argument into a tool, building the **Brainrot Meter** Chrome extension on top of the original site.
-
-The extension adds:
-
-- **A friction pause** — a short, enforced countdown before any infinite feed opens, with one deliberate click to continue and a one-tap "close this tab" instead.
-- **Per-URL classification** — it distinguishes the endless surfaces from the intentional ones: YouTube Shorts but not a lecture, Reddit's front page but not the subreddit you chose to open.
-- **A live dashboard** — today's total, a per-platform breakdown, and a 7-day trend, with a running time badge on the toolbar icon.
-- **Goal-based cost framing** — name what the scrolling is taking from ("learn guitar"), and the pause reminds you of it by name.
-- **Threshold check-ins** — a gentle reminder after a set number of feed-minutes in a day.
-- **Idle-aware tracking** — time spent away from the keyboard isn't counted, so the numbers stay honest.
-- **Private by design** — 100% local storage, no account and no network code, with JSON export and one-tap erase.
+| Section | |
+|---|---|
+| [What it does](#what-it-does) | The site and the extension, by area |
+| [Architecture](#architecture) | Two halves, one subject |
+| [How a pause works](#how-a-pause-works) | URL in, friction, choice |
+| [Quick start](#quick-start) | Install the extension, run the site |
+| [Project status](#project-status) | Where it came from, and what ships |
+| [Design decisions](#design-decisions) | Why friction, not just tracking |
+| [Repository layout](#repository-layout) | Where things live |
+| [Documentation](#documentation) | Which file answers which question |
+| [Team](#team) | Who built it |
 
 ---
 
-## What's inside
+## What it does
 
-The project has two halves, each in its own folder.
-
-### The site — [`website/`](website/)
-A **React + Vite + Tailwind** experience that wanders the strange edges of internet culture: Deep Shower Thoughts, a live Meme Machine, Fandom Frenzy, and Strange Phobias. Underneath the humour it's an essay about algorithmic capture and the slow erosion of attention.
-
-### 🧩 The extension — [`extension/`](extension/)
-A **Manifest V3** Chrome extension that measures the time you actually lose to infinite feeds and interrupts the scroll with a short, chosen pause. No build step — load it unpacked and go.
-
-- **The pause** *(left)* — before a feed opens, a countdown and one deliberate click. Enough friction to break the automatic reach, not enough to feel like a wall.
-- **The dashboard** *(right)* — today's total, a per-platform breakdown, a 7-day trend, and one-tap JSON export.
-- **The platforms** — YouTube Shorts, Instagram Reels, X / Twitter, Reddit's front page, Facebook, Snapchat Spotlight, Threads, Bluesky, Tumblr, Pinterest, Quora, 9GAG, ShareChat and Likee. Classification is **per-URL, not per-domain**: a lecture isn't brainrot, a Short is; r/cscareerquestions isn't, r/all is.
-- **Local only** — no account, no server, and no network code anywhere in the extension. Your data never leaves the machine.
-
-Full architecture and design notes live in [`extension/README.md`](extension/README.md).
+| Area | Capabilities |
+|---|---|
+| **The pause** | A short, enforced countdown before an infinite feed opens, one deliberate click to continue, and a one-tap "close this tab" |
+| **Classification** | Per-URL, not per-domain: a Short is brainrot, a lecture isn't; r/all is, r/cscareerquestions isn't |
+| **Platforms** | YouTube Shorts, Instagram Reels, X / Twitter, Reddit's front page, Facebook, Snapchat Spotlight, Threads, Bluesky, Tumblr, Pinterest, Quora, 9GAG, ShareChat, Likee |
+| **Dashboard** | Today's total, a per-platform breakdown, a 7-day trend, and a running time badge on the toolbar icon |
+| **Cost framing** | Name what the scrolling is taking from ("learn guitar") and the pause says it back to you |
+| **Check-ins** | A gentle reminder after a set number of feed-minutes in a day |
+| **Honest numbers** | Idle-aware tracking — time away from the keyboard isn't counted |
+| **Privacy** | 100% local storage, no account, no network code; JSON export and one-tap erase |
+| **The site** | Deep Shower Thoughts, a live Meme Machine, Fandom Frenzy and Strange Phobias — an essay about attention underneath the humour |
 
 ---
 
-## Why friction, not just tracking
+## Architecture
 
-Screen-time dashboards have famously poor retention — people install one, get scolded by a number, feel guilty, and uninstall. The evidence points elsewhere: the *one sec* study (PNAS, 2023) found roughly a third fewer app opens from a brief enforced pause. The mechanism is interrupting the automatic reach, not informing someone of a fact they already know.
+```mermaid
+graph TB
+    subgraph site["website/ — React · Vite · Tailwind"]
+        PAGES["Shower Thoughts · Meme Machine<br/>Fandom Frenzy · Strange Phobias"]
+    end
 
-So in Rotmeter the **pause is the product** and the dashboard is there to make it credible. The cost framing is personal and forward-looking: name your goal once, and the pause reads *"You said you wanted to learn guitar."* Same mechanic, far more teeth than "41 hours = 12 books."
+    subgraph ext["extension/ — Chrome Manifest V3"]
+        BG["background service worker<br/>per-URL classification · idle-aware timing"]
+        PAUSE["pause screen<br/>countdown · goal reminder"]
+        POP["popup dashboard<br/>today · breakdown · 7-day trend"]
+        STORE[("chrome.storage — local only")]
+    end
+
+    TAB["Browser tab"] --> BG
+    BG -->|"infinite feed"| PAUSE
+    PAUSE -->|"continue"| TAB
+    PAUSE -->|"close this tab"| TAB
+    BG <--> STORE
+    POP <--> STORE
+    POP -->|"export JSON · erase"| STORE
+```
+
+There is no server: nothing in the extension makes a network request.
 
 ---
 
-## Setup
+## How a pause works
+
+```mermaid
+sequenceDiagram
+    participant U as You
+    participant T as Tab
+    participant B as Background worker
+    participant P as Pause screen
+    participant S as Local storage
+
+    U->>T: open youtube.com/shorts/…
+    T->>B: navigation
+    B->>B: classify by URL, not domain
+    alt infinite feed
+        B->>P: interrupt
+        P->>S: read your goal
+        P-->>U: countdown · "You said you wanted to learn guitar."
+        alt continue
+            U->>P: one deliberate click
+            P->>T: open the feed
+            B->>S: count active minutes (idle time excluded)
+        else close
+            U->>P: close this tab
+        end
+    else intentional page
+        B->>T: no interruption
+    end
+```
+
+---
+
+## Quick start
+
+**The extension** — no build step:
+
+1. [Download the zip](https://github.com/guru-bharadwaj20/Rotmeter/releases/latest/download/brainrot-meter.zip) and **unzip it**.
+2. Open `chrome://extensions` and turn on **Developer mode** (top right).
+3. Drag the unzipped **`brainrot-meter` folder** onto the page — or clone the repo
+   and use **Load unpacked** on [`extension/`](extension/).
+
+Chrome loads unpacked extensions from a folder, not a `.zip`. Works in Chrome,
+Edge, Brave and any other Chromium browser.
 
 **The site**
+
 ```bash
 cd website
 npm install
 npm run dev
 ```
 
-**The extension**
+---
 
-No installation or build required. Either:
+## Project status
 
-- **[Download the zip](https://github.com/guru-bharadwaj20/Rotmeter/releases/latest/download/brainrot-meter.zip)**, unzip it, and drag the `brainrot-meter` folder onto `chrome://extensions` with **Developer mode** enabled — or
-- Clone the repo and use **Load unpacked** → select the [`extension/`](extension/) folder.
+Rotmeter began as **BrainROT**, a multi-page React site built with teammates as
+the final deliverable for the **PESU I/O** course. After the course, the project
+continued solo: its own subject — attention, and the way infinite feeds take it —
+became a tool, the **Brainrot Meter** extension, built on top of the site.
+
+| Part | Status |
+|---|---|
+| Site | ✅ the course deliverable, carried forward |
+| Extension | ✅ released as a downloadable zip on GitHub Releases |
+| Platforms covered | 14 |
 
 ---
 
-## Project structure
+## Design decisions
+
+**The pause is the product.** Screen-time dashboards have famously poor
+retention: people install one, get scolded by a number, and uninstall. The *one
+sec* study (PNAS, 2023) found roughly a third fewer app opens from a brief
+enforced pause. Interrupting the automatic reach works; informing someone of a
+fact they already know doesn't. The dashboard is there to make the pause
+credible.
+
+**Friction, not a wall.** A countdown and one deliberate click is enough to break
+the reflex without making the extension something you fight and remove.
+
+**Personal, forward-looking cost.** "You said you wanted to learn guitar" has far
+more teeth than "41 hours = 12 books".
+
+**Per-URL classification.** Blocking a domain punishes the intentional uses of a
+platform; classifying the URL targets only the endless surfaces.
+
+**Local only.** No account, no server, no network code. Your data never leaves
+the machine, and you can export or erase it in one tap.
+
+---
+
+## Repository layout
 
 ```
-Rotmeter/
-├── website/              React + Vite site (the essay)
-├── extension/            Chrome extension, MV3 (the intervention)
-├── images/               Screenshots used in this README
-├── brainrot-meter.zip    Packaged extension, for the download link above
-└── README.md
+.
+├── website/              React + Vite site — the essay
+├── extension/            Chrome extension, Manifest V3 — the intervention
+├── images/               screenshots used in this README
+└── brainrot-meter.zip    the packaged extension
 ```
 
 ---
 
-## Disclaimer
+## Documentation
 
-Built for educational and portfolio purposes. All memes, fandom references, images, and text are used under fair-use guidelines; respective trademarks and copyrights belong to their rightful owners. The extension collects nothing and sends nothing — everything it records stays in your browser's local storage.
+| Question | File |
+|---|---|
+| *How is the extension built?* | [extension/README.md](extension/README.md) |
+
+> Built for educational and portfolio purposes. Memes, fandom references, images
+> and text on the site are used under fair-use guidelines; trademarks and
+> copyrights belong to their owners. The extension collects nothing and sends
+> nothing.
+
+---
+
+## Team
+
+| Member | Focus |
+|---|---|
+| **Guru R Bharadwaj** | The Brainrot Meter extension, and the site with PESU I/O teammates |
 
 ---
 
 ## License
 
-Released under the [MIT License](LICENSE).
+[MIT](LICENSE).
