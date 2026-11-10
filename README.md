@@ -1,5 +1,13 @@
 # Rotmeter
 
+<p align="center">
+  <a href="Rotmeter%20Demo.mp4">
+    <img src="images/Rotmeter%20Demo%20thumbnail.png" alt="Watch the Rotmeter demo video" width="720">
+  </a>
+  <br>
+  <sub>▶ <b><a href="Rotmeter%20Demo.mp4">Watch the Rotmeter demo</a></b> (74 s): the README quick start on a fresh clone, then the site and the extension from the release zip, driven live</sub>
+</p>
+
 **The internet, examined — and interrupted. A site about internet-culture brainrot, and a Chrome extension that puts a few deliberate seconds between you and the infinite feed.**
 
 [![Download](https://img.shields.io/badge/download-brainrot--meter.zip-2ea44f?logo=googlechrome&logoColor=white)](https://github.com/guru-bharadwaj20/Rotmeter/releases/latest/download/brainrot-meter.zip)
